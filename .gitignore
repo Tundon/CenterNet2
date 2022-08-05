@@ -1,3 +1,5 @@
+.DS_Store
+
 third_party/detectron2
 slurm*
 # output dir

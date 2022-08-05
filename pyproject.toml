@@ -1,0 +1,50 @@
+# [build-system]
+# requires = ["setuptools>=61.0"]
+# build-backend = "setuptools.build_meta"
+[project]
+name = "centernet2"
+version = "1.0"
+authors = [
+  { name="Yuxin Wu", email="yuxinwu@fb.com" },
+  { name="Vasil Khalidov", email="vkhalidov@fb.com" },
+  { name="Yuxin Wu", email="ppwwyyxx@users.noreply.github.com" },
+  { name="Marc Szafraniec", email="mszafraniec@fb.com" },
+  { name="Yuxin Wu", email="ppwwyyxxc@gmail.com" },
+  { name="Yanghan Wang", email="yanghan@fb.com" },
+  { name="Alexander Kirillov", email="akirillov@fb.com" },
+  { name="Xingyi Zhou", email="zhouxy2017@gmail.com" },
+  { name="Bowen Cheng", email="bowenc0221@gmail.com" },
+  { name="Patrick Labatut", email="plabatut@fb.com" },
+  { name="chenbohua3", email="chen_bohua@hotmail.com" },
+  { name="Jing Huang", email="jinghuang@fb.com" },
+  { name="Ross Girshick", email="rbg@fb.com" },
+  { name="Dave Schnizlein", email="dschnizlein@fb.com" },
+  { name="Vaibhav Aggarwal", email="vaibhava@fb.com" },
+  { name="MrParosk <erik", email="parlstrand@gmail.com" },
+  { name="Sam Pepose", email="sampepose@fb.com" },
+  { name="Jon Morton", email="jamorton@fb.com" },
+  { name="Max Frei", email="max.frei@uni-due.de" },
+  { name="Wenliang Zhao", email="wenliangzhao@fb.com" },
+  { name="Owen Wang", email="ojwang@fb.com" },
+]
+description = "Two-stage object detectors that use class-agnostic one-stage detectors as the proposal network."
+dependencies = [
+  "detectron2>=0.6",
+  "torch>=1.10"
+]
+[tool.setuptools]
+packages = [
+  "centernet", 
+  "centernet.data", 
+  "centernet.data.datasets", 
+  "centernet.data.transforms", 
+  "centernet.modeling",
+  "centernet.modeling.backbone",
+  "centernet.modeling.dense_heads",
+  "centernet.modeling.layers",
+  "centernet.modeling.meta_arch",
+  "centernet.modeling.roi_heads",
+]
+# [tool.setuptools.packages.find]
+# where = "centernet"
+# include = ["*"]
