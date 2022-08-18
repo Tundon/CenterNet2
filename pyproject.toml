@@ -2,8 +2,8 @@
 # requires = ["setuptools>=61.0"]
 # build-backend = "setuptools.build_meta"
 [project]
-name = "centernet2"
-version = "1.0"
+name = "centernet"
+version = "2.0"
 authors = [
   { name="Yuxin Wu", email="yuxinwu@fb.com" },
   { name="Vasil Khalidov", email="vkhalidov@fb.com" },
