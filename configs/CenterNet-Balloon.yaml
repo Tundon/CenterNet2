@@ -7,7 +7,9 @@ DATASETS:
   TRAIN: ("balloon_train",)
   TEST: ("balloon_val",)
 SOLVER:
-  MAX_ITER: 300
-  BASE_LR: 0.08
+  MAX_ITER: 600
+  BASE_LR: 0.00025
   IMS_PER_BATCH: 2
   RESET_ITER: true
+  WARMUP_ITERS: 20
+  STEPS: (300,)
