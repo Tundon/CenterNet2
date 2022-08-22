@@ -67,7 +67,7 @@ def _ind2il(ind, shapes_per_level, N):
     while r - S >= N * shapes_per_level[l][0] * shapes_per_level[l][1]:
         S += N * shapes_per_level[l][0] * shapes_per_level[l][1]
         l += 1
-    i = (r - S) // (shapes_per_level[l][0] * shapes_per_level[l][1])
+    i = torch.div((r - S), (shapes_per_level[l][0] * shapes_per_level[l][1]), rounding_mode='floor')
     return i, l
 
 def debug_train(
