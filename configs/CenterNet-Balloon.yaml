@@ -1,4 +1,5 @@
 _BASE_: "Base_S4_DLA.yaml"
+DEBUG: true
 MODEL:
   CENTERNET:
     NUM_CLASSES: 1
@@ -7,9 +8,10 @@ DATASETS:
   TRAIN: ("balloon_train",)
   TEST: ("balloon_val",)
 SOLVER:
-  MAX_ITER: 600
-  BASE_LR: 0.0000025
-  IMS_PER_BATCH: 2
+  MAX_ITER: 300
+  LR_SCHEDULER_NAME: "WarmupMultiStepLR"
+  BASE_LR: 0.3
+  IMS_PER_BATCH: 4
   RESET_ITER: true
   WARMUP_ITERS: 20
-  STEPS: (300,)
+  STEPS: ()
