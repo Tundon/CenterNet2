@@ -54,5 +54,5 @@ for d in ["train", "val"]:
     DatasetCatalog.register(
         "balloon_" + d, lambda d=d: get_balloon_dicts("datasets/balloon/" + d)
     )
-    # MetadataCatalog.get("balloon_" + d).set(thing_classes=["balloon"], evaluator_type='coco')
-    MetadataCatalog.get("balloon_" + d).set(thing_classes=["balloon"])
+    MetadataCatalog.get("balloon_" + d).set(thing_classes=["balloon"], evaluator_type='coco')
+    # MetadataCatalog.get("balloon_" + d).set(thing_classes=["balloon"])
